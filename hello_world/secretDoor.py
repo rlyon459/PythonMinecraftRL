@@ -7,7 +7,7 @@ z = 42
 
 mc.player.setPos(x,y,z + 1)
 pos = mc.player.getPos()
-mc.postToChat("Place an offering on the pedestal.")
+mc.postToChat("Place an offering on the pedestal, then hit run again.")
 gift = mc.getBlock(x, y, z)
 if gift != 0:
     if gift == 57:
