@@ -5,14 +5,12 @@ mc = Minecraft.create()
 import random
 import time
 
-# Get the player position
-
-#set the x, y, and z on the same line using tuple
+pos = mc.player.getTilePos()
+x, y, z = pos.x + 1, pos.y, pos.z
 
 while True:
     x += random.uniform(-0.2, 0.2)
-    #change the z variable by a random float
-    z +=
+    z += random.uniform(-0.2, 0.2)
     y = mc.getHeight(x, z)
     
     mc.player.setPos(x, y, z)
