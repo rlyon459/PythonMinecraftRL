@@ -16,4 +16,4 @@ while count < 20:
     time.sleep(1)
     
 mc.postToChat("lowest: " + str(height[0]))
-mc.postToChat("lowest: " + str(height[1]))
+mc.postToChat("highest: " + str(height[1]))
