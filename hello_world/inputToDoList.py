@@ -1,13 +1,12 @@
-toDoFile =
+toDoFile = open("/home/pi/hello_world/toDoFile.txt", "a")
 
 toDoList = ""
 
-toDoItem = input("Enter a to-do List them:")
+toDoItem = input("Enter a to-do list item: ")
 
 while toDoItem != "exit":
-    toDoList = toDoList + toDoItem + "/n"
-    toDoList = input("Enter a to-do List item:")
+    toDoList = toDoList + toDoItem + "\n"
+    toDoItem = input("Enter a to-do list item: ")
     
-    
-#write the to-do list to the file
-# Close the file                                                                                                                                      
+toDoFile.write(toDoList)
+toDoFile.close()
