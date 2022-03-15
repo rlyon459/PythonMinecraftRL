@@ -1,7 +1,7 @@
 from mcpi.minecraft import Minecraft
 mc = Minecraft.create()
 
-import pickle
+import shelve
 
 def sortPair(val1, val2):
     if val1 > val2:
@@ -50,7 +50,8 @@ y2 = pos2.y
 z2 = pos2.z
 
 structure = copyStructure(x1, y1, z1, x2, y2, z2)
+structureName = input("What do you want to call the structure? ")
 
-saveFile = open("saveStructure.txt", "wb")
-pickle.dump(structure, saveFile)
-saveFile.close()
+shelveFile = shelve.open("structuresFile.db")
+shelveFile[structureName] = structure
+shelveFile.close()
