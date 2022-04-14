@@ -9,6 +9,6 @@ def showLocation():
     x = pos.x
     y = pos.y
     z = pos.z
-    return "x " + pos.x + ", y " + pos.y + ", z " + pos.z
+    return "x " + x + ", y " + y + ", z " + z
 
 app.run()
