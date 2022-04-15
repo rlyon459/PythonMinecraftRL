@@ -4,9 +4,6 @@ mc = Minecraft.create()
 import time
 import random
 
-mc.postToChat("Welcome to the MAZE by team camelCase.")
-mc.postToChat("Destroy the gold block at the end of the maze to reveal the secret message.")
-
 # print the player postion in the game:
 pos = mc.player.getPos()
 ogx = int(pos.x)
@@ -164,6 +161,9 @@ xrn -= 30
 zrn += 10
 
 buildDoomPit(xrn, yrn, zrn)
+
+mc.postToChat("Welcome to the MAZE by team camelCase.")
+mc.postToChat("Destroy the gold block at the end of the maze to reveal the secret message.")
 
 while True:
     gift = mc.getBlock(x_x, y_y, z_z)
